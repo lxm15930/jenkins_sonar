@@ -6,7 +6,7 @@ pipeline {
 	   withSonarQubeEnv('sonarqube'){
 	   bat """
 	     mvn clean verify sonar:sonar \
-		 -Dsonar.token=0d01ad741b3f156f7e9ff62257863ed85c6c5d2c
+		 -Dsonar.login=11f571e00b72b08900b3fc1f8d41f8a3af2caaf8
 		"""
 		}
 	  }
