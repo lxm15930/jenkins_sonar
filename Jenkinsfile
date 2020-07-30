@@ -6,8 +6,8 @@ pipeline {
 	   withSonarQubeEnv('sonarqube'){
 	   bat """
 	     mvn clean verify sonar:sonar \
-		 -Dsonar.login=admin \
-		 -Dsonar.password=admin
+		 -Dsonar.login=admin1 \
+		 -Dsonar.password=admin1
 		"""
 		}
 	  }
