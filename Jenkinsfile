@@ -3,9 +3,11 @@ pipeline {
 	stages {
 	stage('code Analysis'){
 	  steps {
+	   withSonarQubeEnv('sonarqube'){
 	   bat """
 	     mvn clean verify sonar:sonar
 		"""
+		}
 	  }
 	}
 	
