@@ -1,14 +1,14 @@
 pipeline {
     agent any
 	stages {
-	   stage('Code Analysis'){
+       stage('CodeAnalysis'){
 			steps{
 				withSonarQubeEnv('sonarqube'){
 					bat  'mvn clean sonar:sonar'
 					}
 				}
 　　		}
-		stage('Quality Gate'){
+		stage('QualityGate'){
 			steps{
 				script {
 					timeout(time:1,unit:'HOURS'){
