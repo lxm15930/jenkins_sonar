@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    stages {
+	stages {
 	   stage('Code Analysis'){
 			steps{
 				withSonarQubeEnv('sonarqube'){
